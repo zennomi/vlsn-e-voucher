@@ -21,21 +21,24 @@ const Home = () => {
     }
 
     return <>
-        <div className="h-[100px] w-full bg-emerald-900 flex items-center justify-center">
+        <div className="h-[100px] w-full bg-emerald-900 flex items-center justify-center p-3 text-center">
             <h2 className="text-white">Đăng ký nhận 3 buổi học gia sư miễn phí</h2>
         </div>
-        <div className="container mx-auto bg-white mt-5 card card-border">
-            <div className="card-body">
-                <Form handleSubmit={handleSubmit} />
+        <div className="container mt-5 mx-auto px-2">
+            <div className=" bg-white card card-border">
+                <div className="card-body">
+                    <Form handleSubmit={handleSubmit} />
+                </div>
             </div>
         </div>
         <Dialog
             isOpen={!!values}
             onClose={onDialogClose}
             onRequestClose={onDialogClose}
+            className="p-2"
         >
             <div className="flex flex-col h-full justify-between">
-                <div className="max-h-96 overflow-y-auto text-center">
+                <div className="overflow-y-auto text-center">
                     <GiPartyPopper className="text-[100px] mx-auto mb-2 text-emerald-600" />
                     <h5 className="">Chúc mừng {values?.name}</h5>
                     <p className="mb-2">
